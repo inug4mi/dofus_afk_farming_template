@@ -11,5 +11,18 @@ def checkImage():
     time.sleep(1)
   except:
     print("image loaded but couldn't find it in Dofus")
-
+  try:
+    pos = pg.locateOnScreen("./image2.jpg", confidence=0.8)
+    pg.moveTo(pos[0]+imageOffset,pos[1]+imageOffset)
+    pg.click()
+    time.sleep(1)
+  except:
+    print("image loaded but couldn't find it in Dofus")
+  try:
+    pos = pg.locateOnScreen("./image3.jpg", confidence=0.8)
+    pg.moveTo(pos[0]+imageOffset,pos[1]+imageOffset)
+    pg.click()
+    time.sleep(1)
+  except:
+    print("image loaded but couldn't find it in Dofus")
 checkImage()
